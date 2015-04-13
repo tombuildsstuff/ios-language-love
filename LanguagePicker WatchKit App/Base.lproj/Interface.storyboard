@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LanguagePicker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="cJC-nx-mEm">
+                            <items>
+                                <label alignment="center" text="Which language do you *love* today?" numberOfLines="3" id="UwY-Ko-zKr"/>
+                                <table alignment="left" id="NsZ-ng-gQD">
+                                    <items>
+                                        <tableRow identifier="LanguageRow" id="Tjh-Ic-zHK" customClass="LanguageRow" customModule="LanguagePicker_WatchKit_Extension">
+                                            <group key="rootItem" width="1" alignment="left" id="cBA-u0-44J">
+                                                <items>
+                                                    <label alignment="center" verticalAlignment="center" text="Label" id="EAH-22-qmS"/>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="label" destination="EAH-22-qmS" id="ueo-AI-EXk"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="NsZ-ng-gQD" id="W0B-wk-H8I"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" topTemplateType="groupLeftLarge" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="LanguagePicker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="gv7-I2-MZq"/>
+                        <label alignment="left" text="Language" id="w74-Od-jRJ"/>
+                        <label alignment="left" text="Picker" id="JDs-Bh-cYC"/>
+                        <label alignment="left" text="Glance" id="TcZ-iU-fdq"/>
+                        <group alignment="left" id="eew-Gs-W6Y">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Pick Now!" id="T2p-5z-eEt"/>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+    </scenes>
+</document>
